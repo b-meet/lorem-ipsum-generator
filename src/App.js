@@ -5,7 +5,7 @@ function App() {
 	const [number, setNumber] = useState("");
 	const [info, setInfo] = useState([]);
 
-	const errorMessage = ["Please enter value between 0 to 8"];
+	const errorMessage = ["Please enter value between 0 to 9"];
 
 	const handleChange = (e) => {
 		setNumber(e.target.value);
@@ -13,7 +13,7 @@ function App() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (number >= 0 && number <= 8) {
+		if (number >= 0 && number <= 9) {
 			setInfo(data.slice(0, number));
 		} else {
 			setInfo([errorMessage]);
